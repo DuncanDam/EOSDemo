@@ -4,12 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "OnlineSessionSettings.h"
 #include "EOSSearchResult.generated.h"
 
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class EOSDEMO_API UEOSSearchResult : public UObject
 {
 	GENERATED_BODY()
