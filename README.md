@@ -54,13 +54,13 @@ You can do the same for `tools/Client2.bat` but with a different account.
 
 ### Environment Set up
 
-#### Install Linux Cross-Compile Toolchain
+#### 1-Install Linux Cross-Compile Toolchain
 
 - Navigate to [Cross-Compile Toolchain Page](https://dev.epicgames.com/documentation/en-us/unreal-engine/linux-development-requirements-for-unreal-engine?application_version=5.4), and find the version that you compile your source code Unreal Editor.
 
 - Install the tool.
 
-#### Modify Source Engine Editor to build EOS plugin with Linux
+#### 2-Modify Source Engine Editor to build EOS plugin with Linux
 
 - Open `\Engine\Plugins\Online\OnlineSubsystemEOS\OnlineSubsystemEOS.uplugin`. And add `Linux` to `PlatformAllowList`:
 
@@ -76,13 +76,13 @@ You can do the same for `tools/Client2.bat` but with a different account.
 - Navigate to `\Engine\Plugins\Online\OnlineSubsystemEOS\Private`. Duplicate `Mac` folder and rename the folder to `Linux`. Then inside that folder rename `MacEOSHelpers.h` to `LinuxEOSHelpers.h`
 - Build the `UnrealEditor` again (not require Rebuild).
 
-#### Install Docker
+#### 3-Install Docker
 
 Follow the instructions here [Docker Window Install](https://docs.docker.com/desktop/install/windows-install/)
 
 This might require installing WSL2 in the process.
 
-#### Create Github Token to pull Unreal Engine runtime image
+#### 4-Create Github Token to pull Unreal Engine runtime image
 
 Follow the instructions here [Authenticating with GitHub Container Registry](https://dev.epicgames.com/documentation/en-us/unreal-engine/quick-start-guide-for-using-container-images-in-unreal-engine?application_version=5.4)
 
@@ -100,7 +100,7 @@ docker pull ghcr.io/epicgames/unreal-engine:runtime
 
 ### Build and Run Linux server with docker image
 
-#### Package project as a Linux Server
+#### 1-Package project as a Linux Server
 
 Open Project and Go to Packaging project. Please choose `Development` for binary configuration for debugging purposes.
 
@@ -108,7 +108,7 @@ Open Project and Go to Packaging project. Please choose `Development` for binary
 
 Select `Build` folder, or any folder you like but make sure to update that with docker build.
 
-#### Build Docker image
+#### 2-Build Docker image
 
 Open `Command Prompt` or `PowerShell`, and navigate to the project folder.
 
@@ -120,7 +120,7 @@ cd PROJECT_DIRECTORY
 docker build -t eos-demo -f ./tools/linux.Dockerfile .
 ```
 
-#### Mount the docker image and run the dedicated server
+#### 3-Mount the docker image and run the dedicated server
 
 Start image and name it `unreal`
 
