@@ -140,6 +140,11 @@ Now you should see this and can start a new linux server
 ue4@ee030e556770:~/project$./linux-server-start.sh -m Map_1 -g Default
 ```
 
+To remove the image run
+```sh
+docker remove unreal
+```
+
 **NOTE**: An alternative way to run is using Docker environment variable, you can uncomment these from `tools/linux.Dockerfile`
 
 ```sh
