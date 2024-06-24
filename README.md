@@ -104,7 +104,7 @@ docker pull ghcr.io/epicgames/unreal-engine:runtime
 
 Open Project and Go to Packaging project. Please choose `Development` for binary configuration for debugging purposes.
 
-![Pack Linux Server](https://github.com/DuncanDam/EOSDemo/tree/main/doc-images/pack-linux-server.png?raw=true)
+![Pack Linux Server](https://github.com/DuncanDam/EOSDemo/blob/main/doc-images/pack-linux-server.png?raw=true)
 
 Select `Build` folder, or any folder you like but make sure to update that with docker build.
 
